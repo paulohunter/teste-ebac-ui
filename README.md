@@ -48,6 +48,7 @@ sudo apt install -y nodejs
 # Verifique a instalação
 node -v
 npm -v
+```
 
 ---
 
@@ -56,6 +57,7 @@ npm -v
 ```bash
 git clone https://github.com/seu-usuario/teste-ebac-ui.git
 cd teste-ebac-ui
+```
 
 ---
 
@@ -63,16 +65,52 @@ cd teste-ebac-ui
 
 ```bash
 npm install
+```
 
 ---
 
 ## 🚀 Rodando os testes
-## 🔍 Modo interativo (com interface)
+
+### 🔍 Modo interativo (com interface)
 
 ```bash
 npx cypress open
+```
 
-##⚙️ Modo headless (linha de comando)
+### ⚙️ Modo headless (linha de comando)
 
 ```bash
 npx cypress run
+```
+
+---
+
+## ✅ Estrutura dos testes
+
+Os testes estão localizados na pasta `cypress/e2e` e validam:
+
+- Login bem-sucedido
+- Login com erro
+- Elementos visíveis após login (ex: link de pedidos)
+
+### Exemplo de validação de login com sucesso:
+
+```js
+cy.get('.woocommerce-MyAccount-navigation-link--orders > a')
+  .should('be.visible')
+```
+
+---
+
+## 🛠 Ferramentas utilizadas
+
+- Node.js
+- Cypress
+- JavaScript
+- Visual Studio Code (VS Code)
+
+---
+
+## 📄 Licença
+
+Este projeto está sob a licença MIT.
