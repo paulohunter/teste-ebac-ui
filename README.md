@@ -48,3 +48,31 @@ sudo apt install -y nodejs
 # Verifique a instalação
 node -v
 npm -v
+
+---
+
+## 📁 Clonando o projeto
+
+```bash
+git clone https://github.com/seu-usuario/teste-ebac-ui.git
+cd teste-ebac-ui
+
+---
+
+## 📦 Instalando dependências do projeto
+
+```bash
+npm install
+
+---
+
+## 🚀 Rodando os testes
+## 🔍 Modo interativo (com interface)
+
+```bash
+npx cypress open
+
+##⚙️ Modo headless (linha de comando)
+
+```bash
+npx cypress run
