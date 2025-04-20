@@ -16,6 +16,7 @@ http://lojaebac.ebaconline.art.br/
 - [🚀 Rodando os testes](#rodando-os-testes)
 - [✅ Estrutura dos testes](#estrutura-dos-testes)
 - [🛠 Ferramentas utilizadas](#ferramentas-utilizadas)
+- [🎲 Instalando a biblioteca Faker](#🎲-instalando-a-biblioteca-faker)
 - [📄 Licença](#licença)
 
 ---
@@ -114,3 +115,27 @@ cy.get('.woocommerce-MyAccount-navigation-link--orders > a')
 ## 📄 Licença
 
 Este projeto está sob a licença MIT.
+---
+
+## 🎲 Instalando a biblioteca Faker
+
+A biblioteca [`@faker-js/faker`](https://www.npmjs.com/package/@faker-js/faker) é usada para gerar dados aleatórios, como nomes, e-mails e endereços, útil para testes automatizados.
+
+### Instalação
+
+```bash
+npm install @faker-js/faker
+```
+
+### Exemplo de uso
+
+```js
+import { faker } from '@faker-js/faker';
+
+const nome = faker.person.firstName();
+const sobrenome = faker.person.lastName();
+const email = faker.internet.email(nome, sobrenome);
+
+console.log(`Nome: ${nome} ${sobrenome}`);
+console.log(`Email: ${email}`);
+```
